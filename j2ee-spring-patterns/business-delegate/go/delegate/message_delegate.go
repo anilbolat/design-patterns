@@ -10,7 +10,7 @@ type MessageDelegate struct {
 	lookupService service.MessageLookupService
 }
 
-func (md MessageDelegate) SendMessage(messageType model.MessageType) {
+func (md *MessageDelegate) SendMessage(messageType model.MessageType) {
 	md.service = md.lookupService.GetMessageService(messageType)
 	md.service.SendMessage()
 }

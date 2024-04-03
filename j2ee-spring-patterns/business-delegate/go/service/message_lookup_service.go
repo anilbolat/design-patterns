@@ -7,14 +7,14 @@ import (
 type MessageLookupService struct {
 }
 
-func (mls MessageLookupService) GetMessageService(messageType model.MessageType) MessageService {
+func (mls *MessageLookupService) GetMessageService(messageType model.MessageType) MessageService {
 	switch messageType {
 	case model.SMS:
-		return SMSService{}
+		return &SMSService{}
 	case model.EMAIL:
-		return EmailService{}
+		return &EmailService{}
 	case model.POST:
-		return PostService{}
+		return &PostService{}
 	default:
 		return nil
 	}

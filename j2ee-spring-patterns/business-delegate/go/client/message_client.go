@@ -9,6 +9,6 @@ type Client struct {
 	delegate delegate.MessageDelegate
 }
 
-func (c Client) SendMessage(messageType model.MessageType) {
+func (c *Client) SendMessage(messageType model.MessageType) {
 	c.delegate.SendMessage(messageType)
 }
