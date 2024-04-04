@@ -5,3 +5,6 @@ j2ee spring framework design patterns
 - business-delegate
 - 
 
+structural design patterns
+- adapter
+- 
